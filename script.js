@@ -7,11 +7,11 @@
 
 // TODO 1: Model a small domain. A class is a good fit here.
 //         Example idea: a BankAccount with a balance, deposit(), and withdraw().
-// class BankAccount {
-//   constructor(owner, balance = 0) {
-//     this.owner = owner;
-//     this.balance = balance;
-//   }
+ class BankAccount {
+   constructor(owner, balance = 0) {
+     this.owner = owner;
+     this.balance = balance;
+   }
 //   deposit(amount) {
 //     // TODO 2: validate. Reject amounts that are not positive numbers.
 //     if (typeof amount !== "number" || amount <= 0) {
