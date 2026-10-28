@@ -12,18 +12,33 @@
      this.owner = owner;
      this.balance = balance;
    }
-//   deposit(amount) {
-//     // TODO 2: validate. Reject amounts that are not positive numbers.
-//     if (typeof amount !== "number" || amount <= 0) {
-//       throw new Error("Deposit must be a positive number.");
-//     }
-//     this.balance += amount;
-//     return this.balance;
-//   }
-//   withdraw(amount) {
-//     // TODO 2: validate here too, and do not allow overdrawing.
-//   }
-// }
+// TODO 2: Deposit and Withdraw
+    
+        deposit(amount) {
+
+           if (typeof amount !== "number" || 
+            amount <= 0) {
+            throw new Error("Deposit must be a positive number.");
+            }
+
+           this.balance += amount;
+           return this.balance;
+          }
+
+         withdraw(amount) {
+            if (typeof amount !== "number" ||
+              amount <= 0 ) {
+                throw new Error ("Withdrawal must be a positive number.");
+              }
+
+            if (amount > this.balance) {
+                throw new Error ("Insufficient balance");
+      } 
+             this.balance -= amount;
+             return this.balance;
+   }
+  
+
 
 // TODO 3: Use try/catch to handle a bad call gracefully instead of crashing.
 // try {
@@ -31,7 +46,7 @@
 //   acct.deposit(-5);
 // } catch (err) {
 //   show("Handled error: " + err.message);
-// }
+    }
 
 // TODO 4: Write a few simple tests. The assert() helper below prints PASS
 //         or FAIL so you can see whether each method behaves as expected.
