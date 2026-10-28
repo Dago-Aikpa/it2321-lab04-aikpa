@@ -36,23 +36,20 @@
       } 
              this.balance -= amount;
              return this.balance;
-   }
+    }
   
-
+  }
 
 // TODO 3: Use try/catch to handle a bad call gracefully instead of crashing.
-// try {
-//   const acct = new BankAccount("Ada", 100);
-//   acct.deposit(-5);
-// } catch (err) {
-//   show("Handled error: " + err.message);
+      try {
+         const acct = new BankAccount("Ada", 100);
+         acct.deposit(-5);
+    } catch (err) {
+  show("Handled error: " + err.message);
     }
 
 // TODO 4: Write a few simple tests. The assert() helper below prints PASS
 //         or FAIL so you can see whether each method behaves as expected.
-// const acct = new BankAccount("Ada", 100);
-// assert(acct.deposit(50) === 150, "deposit adds to balance");
-// assert(/* a test for withdraw */ false, "withdraw subtracts from balance");
 
 
 // ----- helpers (you do not need to change these) -----
